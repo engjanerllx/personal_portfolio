@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Quiz</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div id="highscore-container" class="alert alert-info mt-3">
+            <h6>Highest Score</h6>
+            <p id="highscore">No highscore yet</p>
+        </div>
+        <div class="title"><span>Machine Learning Quiz</span></div>
+        <div id="quiz-container" class="card shadow-lg">
+            <div class="card-body">
+                <h5 id="question" class="card-title"></h5>
+                <div id="options" class="btn-group-vertical w-100"></div>
+                <div id="feedback" class="mt-3"></div>
+                <div id="timer" class="mt-3 text-danger font-weight-bold"></div>
+            </div>
+        </div>
+        <div id="result-container" class="card mt-3 d-none shadow-lg">
+            <div class="card-body text-center">
+                <h5 class="card-title">Quiz Completed!</h5>
+                <p id="final-score"></p>
+                <button id="restart-btn" class="btn btn-success">Restart Quiz</button>
+                <button onclick="location.href='Interactive_Quizzes.html'" class="btn btn-secondary">Go Back</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/ML.js"></script>
+</body>
+</html>
