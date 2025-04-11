@@ -1,9 +1,3 @@
-<script>
-  if (!localStorage.getItem("loggedInUser")) {
-    alert("You must log in first!");
-    window.location.href = "login.html"; 
-  }
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,215 +6,269 @@
     <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css"> </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+      if (!localStorage.getItem("loggedInUser")) {
+        alert("You must log in first!");
+        window.location.href = "login.html"; 
+      }
+    </script>
+</head>
 <body>
-    <header class="bg-light py-3">
-        <nav class="container navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">carlajane</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#quiz">Quiz</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacts">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="logoutLink">Logout</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="container-fluid navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">carlajane</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz">Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacts">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="logoutLink">Logout</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="container my-5">
-        <section id="home" class="py-5 text-center">
-            <h1>Hello, I'm Carla Jane</h1>
-            <p class="lead">A Computer Science student</p>
-            <img src="../image/me/carla.jpg" alt="Your Profile Picture" class="img-fluid rounded-circle" style="max-width: 150px;">
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="full-screen-section">
+            <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+                <h1>Hello, I'm Carla Jane</h1>
+                <p class="lead">A Computer Science student</p>
+                <img src="../image/me/carla.jpg" alt="Your Profile Picture" class="img-fluid rounded-circle" style="max-width: 250px;">
+            </div>
         </section>
         
         <!-- About Section -->
-    <section id="about" class="py-5">
-      <div class="about-me container">
-        <div class="section-title"><h2>About Me</h2></div>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="../image/me/cala.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 content">
-            <p>Hey there! I'm Carla Jane Lagan, a Computer Science student with a passion for turning caffeine into code and bugs into lessons (sometimes tears, but mostly lessons). Ever since I wrote my first "Hello, World!" program, I've been on a mission to create things that make life easier, more fun, or just a little bit cooler. Whether it's building web apps, experimenting with AI, or figuring out why my code won’t run (spoiler: it's always a missing semicolon), I love the challenge that comes with tech.</p>
-            <p>My ultimate goal? To develop innovative software that makes an impact—whether that means crafting sleek, user-friendly applications or diving into AI and Human-Computer Interaction to bridge the gap between people and technology. I believe the best way to learn is by building, breaking, and rebuilding, so I'm always exploring new projects and ideas. Who knows? Maybe one day, I'll be working on something that changes the game! Until then, I'll keep coding, debugging, and dreaming big.</p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><strong>Birthday:</strong> 18 December 2003</li>
-                  <li><strong>Phone:</strong> 091 9415 334</li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><strong>City:</strong> Bgy., Mandaragat, Puerto Princesa City</li>
-                  <li><strong>Email:</strong> lagancarla@gmail.com</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-        
-
-        <section id="skills" class="py-5">
-            <h2>Skills</h2>
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="card p-3 text-center">
-                        <h4>Web Development</h4>
-                        <p>HTML, CSS, JavaScript, Bootstrap</p>
+        <section id="about" class="full-screen-section">
+            <div class="container h-100 d-flex flex-column justify-content-center">
+                <div class="section-title"><h2>About Me</h2></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="../image/me/cala.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-8 pt-4 content">
+                        <p>Hey there! I'm Carla Jane Lagan, a Computer Science student with a passion for turning caffeine into code and bugs into lessons (sometimes tears, but mostly lessons). Ever since I wrote my first "Hello, World!" program, I've been on a mission to create things that make life easier, more fun, or just a little bit cooler. Whether it's building web apps, experimenting with AI, or figuring out why my code won't run (spoiler: it's always a missing semicolon), I love the challenge that comes with tech.</p>
+                        <p>My ultimate goal? To develop innovative software that makes an impact—whether that means crafting sleek, user-friendly applications or diving into AI and Human-Computer Interaction to bridge the gap between people and technology. I believe the best way to learn is by building, breaking, and rebuilding, so I'm always exploring new projects and ideas. Who knows? Maybe one day, I'll be working on something that changes the game! Until then, I'll keep coding, debugging, and dreaming big.</p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><strong>Birthday:</strong> 18 December 2003</li>
+                                    <li><strong>Phone:</strong> 091 9415 334</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><strong>City:</strong> Bgy., Mandaragat, Puerto Princesa City</li>
+                                    <li><strong>Email:</strong> lagancarla@gmail.com</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card p-3 text-center">
-                        <h4>UI/UX Design</h4>
-                        <p>Figma, Adobe XD</p>
-                    </div>
-                </div>
-                    <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background: rgb(235, 155, 182)">
-            <h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90">
-                  <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130">
-                </p>
-            </div>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background: rgb(235, 155, 182)">
-              <h4 style="text-align:left;color:#09203a">Frameworks</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="upload.wikimedia.org" width="90" height="70">
-              </p>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background: rgb(235, 155, 182)">
-              <h4 style="text-align:left;color:#09203a">Tools</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
-              </p>
-            </div>
-            </div>
             </div>
         </section>
 
-        <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-container">
-        <div class="project"><h3>🖥️ PSUSphere</h3><a href="#">View on GitHub</a></div>
-        <div class="project"><h3>☕ The Ramshackle Cafe</h3><a href="#">View on GitHub</a></div>
-        <div class="project"><h3>📚 Student Management System</h3><a href="#">View on GitHub</a></div>
-        <div class="project"><h3>🚗 Online Vehicle Registration System</h3><a href="#">View on GitHub</a></div>
-        <div class="project"><h3>🔥 FireApp</h3><a href="#">View on GitHub</a></div>
-        <div class="project"><h3>💻 Project_DB</h3><a href="#">View on GitHub</a></div>
-        <div class="project"><h3>🛒 e-Commerce</h3><a href="#">View on GitHub</a></div>
-        <div class="project"><h3>🔢 Binary and Number Converter Program</h3><a href="#">View on GitHub</a></div>
-      </div>
-    </section>
+        <!-- Skills Section-->
+        <section id="skills" class="full-screen-section">
+            <div class="container h-100 d-flex flex-column justify-content-center">
+                <h2>Skills</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card p-3 text-center skill-card web-dev">
+                            <h4>Web Development</h4>
+                            <p>HTML, CSS, JavaScript, Bootstrap</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card p-3 text-center skill-card ui-ux">
+                            <h4>UI/UX Design</h4>
+                            <p>Figma, Adobe XD</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card p-3 text-center skill-card other-skills">
+                            <h4>Other Skills</h4>
+                            <p>Problem Solving, Team Collaboration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12" data-aos="fade-up">
+                        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background: rgb(235, 155, 182)">
+                            <h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
+                            <p style="text-align:left;">
+                                <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90">
+                                <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130">
+                            </p>
+                        </div>
+                        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background: rgb(235, 155, 182)">
+                            <h4 style="text-align:left;color:#09203a">Frameworks</h4>
+                            <p style="text-align:left;">
+                                <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="vectorlogo.zone">
+                                <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">
+                                <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="vectorlogo.zone">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="upload.wikimedia.org" width="90" height="70">
+                            </p>
+                        </div>
+                        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background: rgb(235, 155, 182)">
+                            <h4 style="text-align:left;color:#09203a">Tools</h4>
+                            <p style="text-align:left;">
+                                <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
+                                <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone">
+                                <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <section class="quiz-section" id="quiz" style="background-image: url('./Personal-Portfolio/img/quiz.png'); background-size: cover; background-position: center; color: white; text-align: center; padding: 100px 20px;">
-  <div class="quiz-container" style="max-width: 600px; margin: 0 auto; background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 10px;">
-    <div class="content">
-      <div class="title" style="font-size: 2.5em; margin-bottom: 20px;"><span>Interactive Quiz</span></div>
-      <p style="font-size: 1.2em; margin-bottom: 30px;">Ready to flex your brain muscles? Dive into our quiz categories and see if you're a coding guru or a general knowledge whiz!</p>
-      <div class="button">
-        <a href="./Interactive_Quizzes.html" style="text-decoration: none;"><button style="padding: 15px 30px; font-size: 1em; border: none; border-radius: 5px; background-color: #d42e81; color: white; cursor: pointer;">Take the Quiz</button></a>
-      </div>
+        <!-- Projects Section -->
+        <section id="projects" class="full-screen-section">
+            <div class="container h-100 d-flex flex-column justify-content-center">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <div class="project"><h3>🖥️ PSUSphere</h3><a href="#">View on GitHub</a></div>
+                    <div class="project"><h3>☕ The Ramshackle Cafe</h3><a href="#">View on GitHub</a></div>
+                    <div class="project"><h3>📚 Student Management System</h3><a href="#">View on GitHub</a></div>
+                    <div class="project"><h3>🚗 Online Vehicle Registration System</h3><a href="#">View on GitHub</a></div>
+                    <div class="project"><h3>🔥 FireApp</h3><a href="#">View on GitHub</a></div>
+                    <div class="project"><h3>💻 Project_DB</h3><a href="#">View on GitHub</a></div>
+                    <div class="project"><h3>🛒 e-Commerce</h3><a href="#">View on GitHub</a></div>
+                    <div class="project"><h3>🔢 Binary and Number Converter Program</h3><a href="#">View on GitHub</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="full-screen-section">
+            <div class="quiz-container">
+                <div class="content">
+                    <div class="title"><span>Interactive Quiz</span></div>
+                    <p>Ready to flex your brain muscles? Dive into our quiz categories and see if you're a coding guru or a general knowledge whiz!</p>
+                    <div class="button">
+                        <a href="./Interactive_Quizzes.html"><button>Take the Quiz</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section  -->
+<section id="blog" class="full-screen-section">
+    <div class="container h-100 d-flex flex-column justify-content-center">
+        <div class="section-title">
+            <h2>Blog</h2>
+        </div>
+        <div class="content">
+            <p class="p">Discover new perspectives and stay informed with our latest blog posts.</p>
+            <div id="blog-post" class="blog-posts">
+                <!-- Blog posts will be inserted here by blogs.js -->
+            </div>
+            <div class="see-more-container">
+                <a href="blogs.html" class="btn see-more-btn">See More</a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-        <!-- Start Contact Section -->
-  <section id="contacts" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
-
-      <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>New Buncag RD., BGy. Mandaragat</p>
-            <p>Puerto Princesa City</p>
-            <p>Palawan</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/carlajanelagan" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://www.github.com/engjanerllx" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-              <a href="mailto:lagancarla@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
-
+        <!-- Contact Section  -->
+        <section id="contacts" class="full-screen-section">
+            <div class="container h-100 d-flex flex-column justify-content-center">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="info-box">
+                            <i class="bx bx-map"></i>
+                            <h3>My Address</h3>
+                            <p>New Buncag RD., BGy. Mandaragat</p>
+                            <p>Puerto Princesa City</p>
+                            <p>Palawan</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+                        <div class="info-box">
+                            <i class="bx bx-share-alt"></i>
+                            <h3>Social Profiles</h3>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/carlajanelagan" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                <a href="https://www.github.com/engjanerllx" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+                                <a href="mailto:lagancarla@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                        <div class="info-box">
+                            <i class="bx bx-envelope"></i>
+                            <h3>Email</h3>
+                            <p>lagancarla@gmail.com</p>
+                            <p>202280039@psu.palawan.edu.ph</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                        <div class="info-box">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>Contact</h3>
+                            <p>+63 910 9415 334</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email</h3>
-            <p>lagancarla@gmail.com</p>
-            <p>202280039@psu.palawan.edu.ph</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Contact</h3>
-            <p>+63 910 9415 334</p>
-          </div>
-        </div>
-      </div>
-      <!-- <div id="sfczmlqxr5caww28rswrt8849ghbekgnh3j" ></div><script type="text/javascript" src="https://counter1.stat.ovh/private/counter.js?c=zmlqxr5caww28rswrt8849ghbekgnh3j&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter1.stat.ovh/private/freecounterstat.php?c=zmlqxr5caww28rswrt8849ghbekgnh3j" border="0" title="free web counter" alt="free web counter" style="visibility: none;"></a></noscript> -->
-    </div>
-  </section>
-  <!-- End Contact Section -->
-
-
+        </section>
     </main>
 
-    <footer class="bg-light py-3 text-center">
-        <p>&copy; 2025 My Portfolio</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-start">
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fas fa-envelope fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>© 2025 Carla Jane Lagan. All rights reserved.</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="#privacy-policy" class="footer-policy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/script.js"></script> </body>
+    <script src="../js/script.js"></script>
+</body>
 </html>

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (user) {
                 localStorage.setItem('loggedInUser', user.username);
                 window.location.href = 'index.html';  
-                loginError.textContent = 'Invalid username/email or password.';
+                loginError.textContent = 'Already logged In.';
                 loginError.classList.remove('d-none');
             }
         });
